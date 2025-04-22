@@ -4,7 +4,39 @@ This repository includes Python scripts the CARD long read team uses to query da
 All scripts below should be run on PromethIONs themselves using the python executable provided at ```/opt/ont/minknow/ont-python/bin/python```.
 ```
 usage: list_platform_qc.py [-h] [--host HOST] [--port PORT] [--position POSITION] [--api-token API_TOKEN] output_name
-list_platform_qc.py: error: the following arguments are required: output_name
+
+List historical flow cell checks on a host.
+
+positional arguments:
+  output_name           Name of an output file to write csv platform qc results to.
+
+options:
+  -h, --help            show this help message and exit
+  --host HOST           Specify which host to connect to.
+  --port PORT           Specify which port to connect to.
+  --position POSITION   Specify which position to connect to.
+  --api-token API_TOKEN
+                        Specify an API token to use, should be returned from the sequencer as a developer API token.
+```
+```
+usage: list_mux_scan.py [-h] [--host HOST] [--port PORT] [--position POSITION] [--api-token API_TOKEN] [--platform-qc PLATFORM_QC] [--platform-qc-output PLATFORM_QC_OUTPUT] output_name
+
+List first mux scan results for all sequencing positions.
+
+positional arguments:
+  output_name           Name of an output file to write csv mux scan results to.
+
+options:
+  -h, --help            show this help message and exit
+  --host HOST           Specify which host to connect to.
+  --port PORT           Specify which port to connect to.
+  --position POSITION   Specify which position to connect to.
+  --api-token API_TOKEN
+                        Specify an API token to use, should be returned from the sequencer as a developer API token.
+  --platform-qc PLATFORM_QC
+                        Specify platform QC csv input for comparison against mux scan results to calculate pore dropoffs.
+  --platform-qc-output PLATFORM_QC_OUTPUT
+                        Specify csv output for platform QC comparison result against mux scan results to calculate pore dropoffs.
 ```
 ## Example platform QC output
 ```
