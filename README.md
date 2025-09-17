@@ -38,6 +38,26 @@ options:
   --platform-qc-output PLATFORM_QC_OUTPUT
                         Specify csv output for platform QC comparison result against mux scan results to calculate pore dropoffs.
 ```
+```
+usage: generate_run_report.py [-h] [--host HOST] [--port PORT] [--api-token API_TOKEN] [--client-cert-chain CLIENT_CERT_CHAIN] [--client-key CLIENT_KEY] [--position POSITION] --protocol PROTOCOL [-j] [--output OUTPUT]
+
+Export run report JSON information.
+
+options:
+  -h, --help            show this help message and exit
+  --host HOST           IP address of the machine running MinKNOW (defaults to localhost)
+  --port PORT           Port to connect to on host (defaults to standard MinKNOW port)
+  --api-token API_TOKEN
+                        Specify an API token to use, should be returned from the sequencer as a developer API token. This can only be left unset if there is a local token available.
+  --client-cert-chain CLIENT_CERT_CHAIN
+                        Path to a PEM-encoded X.509 certificate chain for client authentication.
+  --client-key CLIENT_KEY
+                        Path to a PEM-encoded private key for client certificate authentication.
+  --position POSITION   Restrict results to those ran on a position on the machine (or MinION serial number)
+  --protocol PROTOCOL   Extract information for a specific protocol run-id (eg. 04462a44-eed3-4550-af0d-bc9683352583 returned from protocol.list_protocol_runs)
+  -j, --json            Output the run report json source data, instead of html
+  --output OUTPUT       Send output to a file instead of stdout.
+```
 ## Example platform QC output
 ```
 position,flow_cell_id,product_code,passed,total_pore_count,timestamp
