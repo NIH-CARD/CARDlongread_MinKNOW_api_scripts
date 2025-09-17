@@ -1,5 +1,5 @@
 # NIA CARD Long Read MinKNOW API Scripts
-This repository includes Python scripts the CARD long read team uses to query data from the MinKNOW API on its three PromethION sequencers. The included scripts collect all past platform QC flow cell checks and identify the first mux scan for runs currently sequencing on a PromethION instrument.
+This repository includes Python scripts the CARD long read team uses to query data from the MinKNOW API on its three PromethION sequencers. The included scripts collect all past platform QC flow cell checks, identify the first mux scan for runs currently sequencing on a PromethION instrument, and generate JSON sequencing reports based protocol run IDs (i.e., UUIDs). We thank Jess Anderson and George Pimm at ONT for drafting template scripts that we have modified and implemented on our sequencers at CARD.
 ## Usage
 All scripts below should be run on PromethIONs themselves using the python executable provided at ```/opt/ont/minknow/ont-python/bin/python```.
 ```
