@@ -70,7 +70,7 @@ def main():
     parser.add_argument(
         "--protocol",
         required=True,
-        help="Extract information for a specific protocol run-id (eg. 04462a44-eed3-4550-af0d-bc9683352583 returned from protocol.list_protocol_runs)",
+        help="Extract information for a specific protocol run-id (eg. 04462a44-eed3-4550-af0d-bc9683352583 returned from protocol.list_protocol_runs) or first eight hexadecimal digits of run-id (e.g., 04462a44).",
     )
     parser.add_argument(
         "-j", "--json",
